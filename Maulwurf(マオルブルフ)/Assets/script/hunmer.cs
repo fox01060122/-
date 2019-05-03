@@ -27,13 +27,14 @@ public class hunmer : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1))
         {
+           
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if(Physics.Raycast(ray,out hit,Mathf.Infinity))
             {
                 float x = Mathf.RoundToInt(hit.point.x);
                 float z = Mathf.RoundToInt(hit.point.z);
-                transform.position = new Vector3(x, 5, z);
+                transform.position = new Vector3(x, 3, z);
             }
             hunmeratt();
             SearchRoom();

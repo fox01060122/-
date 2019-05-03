@@ -25,11 +25,12 @@ public class fadeout : MonoBehaviour
     void Update()
     {
         if (Input.anyKey) isfadeout = true;
-        if (isfadeout==false) GetComponent<AudioSource>().Play();
+        
         if (isfadeout)
         {
             Startfadeout();
-            Invoke("changegame", 2f);
+            Invoke("changegame", 5f);
+            GetComponent<AudioSource>().Play();
         }
 
     }
